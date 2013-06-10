@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 
 
 def median_filter(x, y, width):
-    y_new = y
+    y_new = np.zeros(len(y))
     for i in range(len(x)):
         y_new[i] = np.median(y[(x > x[i] - width * 0.5) &
                                (x < x[i] + width * 0.5)])
